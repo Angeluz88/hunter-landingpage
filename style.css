@@ -1,0 +1,146 @@
+/*********custom properties***********/
+@font-face {
+  font-family: "principal";
+  src: url(fonts/Hacked-KerX.ttf);
+}
+
+:root {
+  --white-color: #f6f4f4;
+  --alpha-color: #01693ecc;
+  --ligth-color: #e22c12;
+  --solid-color: #ac1f3f;
+  --first-font: "principal";
+  
+}
+/*********reset***********/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  margin: 0;
+  list-style: none;
+  font-size: 16px;
+}
+body {
+  font-family: var(--first-font);
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+/*****************utilities****************/
+
+.btn {
+  background-color: var(--solid-color);
+  color: var(--white-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  line-height: 0;
+  font-family: var(--first-font);
+  text-transform: uppercase;
+  width: 300px;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--alpha-color);
+}
+
+/*****************site styles****************/
+
+/***************************header home container**************************/
+
+/*****************header****************/
+.header-home-container {
+  background-image: url(img/back.webp);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+  background-color: transparent;
+  z-index: 999995;
+  position: fixed;
+  width: 100%;
+  transition: all 0.3s;
+}
+.nav-container > .logo {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.nav-container > .logo > img {
+  width: 60px;
+}
+.nav-container > .logo > h2 {
+  color: var(--ligth-color);
+}
+
+.nav-container > .navigation > .menu {
+  display: flex;
+  column-gap: 40px;
+  margin-top: 15px;
+}
+.nav-container > .navigation > .menu > .menu-item > a {
+  color: var(--ligth-color);
+  transition: all 0.3s;
+  font-weight: bold;
+ 
+}
+
+.nav-container > .navigation > .menu > .menu-item > a:hover {
+  color: var(--white-color);
+}
+
+.nav-active { /* clase utilizada por javascrip para efecto de la nav*/
+  background-color: var(--alpha-color);
+}
+
+/*****************home****************/
+
+.home-title {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  align-items: flex-start;
+  margin-left: 80px;
+}
+
+.home-title > h1 {
+  color: var(--ligth-color);
+  font-size: 3.5rem;
+  text-align: start;
+}
+
+.home-title > h1 > span {
+  font-family: var(--first-font);
+  color: var(--solid-color);
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.btn {
+  align-self: auto;
+  margin-left: 250px;
+  margin-bottom: 30px;
+}
+/*****************ghost section****************/
+
+.vh {
+  height: 100vh;
+}
